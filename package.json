@@ -1,5 +1,5 @@
 {
-  "name": "str-utils",
+  "name": "string-playground",
   "version": "1.0.0",
   "description": "String utility functions for clean and consistent text handling in JavaScript.",
   "main": "index.ts",
