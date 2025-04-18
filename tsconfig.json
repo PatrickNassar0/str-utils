@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "ES5",
+      "module": "ES6", // This means using import / export syntax in your compiled JS.
+      "esModuleInterop": true, // Allows default imports from modules with no default export
+      "outDir": "./build",
+      "declaration": true,
+      "sourceMap": true, //Allows you to see your original TypeScript source in browser dev tools when debugging the final JavaScript output.
+      "strict": true,
+      "moduleResolution": "node",
+      "lib": ["ES6"]
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "build"]
+  }

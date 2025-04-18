@@ -1,6 +1,6 @@
 # string-playground
 
-String utility functions for clean and consistent text handling in JavaScript.
+String utility functions for clean and consistent text handling in TypeScript and JavaScript.
 
 ---
 
@@ -19,7 +19,7 @@ String utility functions for clean and consistent text handling in JavaScript.
 ```bash
 npm install string-playground
 # or
-pnpm add string-playground
+pnpm install string-playground
 # or
 yarn add string-playground
 ```
