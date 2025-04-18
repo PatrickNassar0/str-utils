@@ -8,7 +8,7 @@ import {
     onlyLetters,
     removeExtraSpaces,
     dotCase,
-} from './index';
+} from '../src/index';
 
 describe('String Utility Functions', () => {
     test('toSlug converts a string to a URL-friendly slug', () => {
