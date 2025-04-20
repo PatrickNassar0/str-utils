@@ -59,6 +59,7 @@ describe('String Utility Functions', () => {
 
     test('removeWords removes all strings in the array', () => {
         expect(removeWords("hello my world", ["Hello"], true)).toBe("hello my world");
-        expect(removeWords("hello my world today", ["Hello", "my" , "today"], false)).toBe("world");
+        expect(removeWords("hello my world today!", ["Hello", "my" , "today!"], false)).toBe("world");
+        expect(removeWords("hello x my world today 1 !", ["Hello", "my" , "x", "1", "!"], false)).toBe("world today");
     })
 });

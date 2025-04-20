@@ -66,7 +66,8 @@ export const dotCase = (str: string): string => {
 
 export const removeWords = (str: string, blacklist: string[], caseSensitive: boolean): string => {
     return blacklist.reduce((acc, word) => {
-        const regex = new RegExp(`\\b${word}\\b`, `g${caseSensitive ? '' : 'i' }`); 
-        return acc.replace(regex, '').trim()             
-    }, str).replace(/\s+/g, ' ');// Ensure no extra spaces remain
+        const escapedWord = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape special characters in the word
+        const regex = new RegExp(`\\s*${escapedWord}\\s*`, `g${caseSensitive ? '' : 'i'}`); // Match the word with optional spaces around it
+        return acc.replace(regex, ' ').trim(); // Replace with a single space and trim the result
+    }, str).replace(/\s+/g, ' '); // Ensure no extra spaces remain
 };
