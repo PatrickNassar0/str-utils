@@ -63,3 +63,10 @@ export const dotCase = (str: string): string => {
         .trim()
         .replace(/\s+/g, '.'); // Replace spaces with dots
 };
+
+export const removeWords = (str: string, blacklist: string[], caseSensitive: boolean): string => {
+    return blacklist.reduce((acc, word) => {
+        const regex = new RegExp(`\\b${word}\\b`, `g${caseSensitive ? '' : 'i' }`); 
+        return acc.replace(regex, '').trim()             
+    }, str).replace(/\s+/g, ' ');// Ensure no extra spaces remain
+};

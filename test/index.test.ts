@@ -8,6 +8,7 @@ import {
     onlyLetters,
     removeExtraSpaces,
     dotCase,
+    removeWords,
 } from '../src/index';
 
 describe('String Utility Functions', () => {
@@ -37,7 +38,7 @@ describe('String Utility Functions', () => {
     });
 
     test('removeNumbers removes all numeric characters from the string', () => {
-        expect(removeNumbers("hello123world456")).toBe("helloworld");
+        expect(removeNumbers("hello123@world456")).toBe("hello@world");
         expect(removeNumbers("no numbers")).toBe("no numbers");
     });
 
@@ -55,4 +56,9 @@ describe('String Utility Functions', () => {
         expect(dotCase("Hello World")).toBe("hello.world");
         expect(dotCase("This is a test")).toBe("this.is.a.test");
     });
+
+    test('removeWords removes all strings in the array', () => {
+        expect(removeWords("hello my world", ["Hello"], true)).toBe("hello my world");
+        expect(removeWords("hello my world today", ["Hello", "my" , "today"], false)).toBe("world");
+    })
 });
