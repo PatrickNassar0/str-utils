@@ -19,8 +19,13 @@
     "text",
     "string-playground",
     "utils",
+    "removeWords",
+    "remove-words",
     "typescript",
-    "javascript"
+    "javascript",
+    "string-manipulation",
+    "string-operations",
+    "string-functions"
   ],
   "author": "Patrick Nassar",
   "license": "MIT",
